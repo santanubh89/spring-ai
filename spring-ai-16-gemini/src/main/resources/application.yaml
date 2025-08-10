@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: spring-ai-16-gemini
+  ai:
+    vertex:
+      ai:
+        gemini:
+          project-id: sharp-arcanum-466208-m7
+          location: us-central1
+          chat:
+            options:
+              model: gemini-2.0-flash-001
