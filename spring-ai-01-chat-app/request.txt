@@ -1,0 +1,52 @@
+Request:
+curl --location 'https://api.openai.com/v1/chat/completions' \
+--header 'Content-Type: application/json' \
+--header 'Authorization: Bearer <API Key>' \
+--header 'Cookie: __cf_bm=_troevy9qLwZh_vHouASLwxV7NE3tRu2hvYjIsJtHrg-1753628655-1.0.1.1-ZE7iv5CgkyGAo0dESutCT2t.Iek8M56bBCnZkV4EagdsxOuuApp9nC001n0NLkDIzJrXTiA1VM9fBud3Mc03EhcRJW_1O5lwetFKF2U8Fiw; _cfuvid=XjzpJLNT9TnYyS6BaeztdF1ro8sZTJJX1oTDi27UL2A-1753628655669-0.0.1.1-604800000' \
+--data '{
+    "model": "gpt-3.5-turbo",
+    "messages": [
+        {
+            "role": "user",
+            "content": "Tell me a Dad Joke about computers?"
+        }
+    ]
+}'
+
+Response:
+{
+    "id": "chatcmpl-BxxD59MH5BacVcR2tZq2jOLRqH4yC",
+    "object": "chat.completion",
+    "created": 1753628655,
+    "model": "gpt-3.5-turbo-0125",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "Why did the computer go to the doctor? Because it had a virus!",
+                "refusal": null,
+                "annotations": []
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 16,
+        "completion_tokens": 15,
+        "total_tokens": 31,
+        "prompt_tokens_details": {
+            "cached_tokens": 0,
+            "audio_tokens": 0
+        },
+        "completion_tokens_details": {
+            "reasoning_tokens": 0,
+            "audio_tokens": 0,
+            "accepted_prediction_tokens": 0,
+            "rejected_prediction_tokens": 0
+        }
+    },
+    "service_tier": "default",
+    "system_fingerprint": null
+}
