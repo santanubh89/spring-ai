@@ -1,0 +1,21 @@
+santanu@Santanus-MacBook-Pro ~ % docker model status
+Docker Model Runner is running
+
+Status:
+llama.cpp: running llama.cpp latest-metal (sha256:01c15bc8c16fe1f8349f67e33d97fe6224a8a34b40b97ec3e33135f790b82129) version: 82bf586
+santanu@Santanus-MacBook-Pro ~ % docker model list
+MODEL NAME  PARAMETERS  QUANTIZATION  ARCHITECTURE  MODEL ID  CREATED  SIZE
+santanu@Santanus-MacBook-Pro ~ % docker model pull ai/gemma3
+Downloaded: 0.00 MB
+Model pulled successfully
+santanu@Santanus-MacBook-Pro ~ % docker model list
+MODEL NAME  PARAMETERS  QUANTIZATION    ARCHITECTURE  MODEL ID      CREATED       SIZE
+ai/gemma3   3.88 B      IQ2_XXS/Q4_K_M  gemma3        0b329b335467  4 months ago  2.31 GiB
+santanu@Santanus-MacBook-Pro ~ % docker model run ai/gemma3
+Interactive chat mode started. Type '/bye' to exit.
+> What is docker?
+Okay, let's break down what Docker is in a way that's easy to understand.
+
+**In a nutshell, Docker is a platform that allows you to package and run applications in isolated containers.** Think of it like shipping containers for software.
+
+Here's a more detailed explanation, broken down into key concepts:
