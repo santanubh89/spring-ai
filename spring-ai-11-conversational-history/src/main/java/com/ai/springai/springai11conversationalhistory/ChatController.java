@@ -21,8 +21,10 @@ public class ChatController {
     }
 
     @GetMapping
-    public String chat(@RequestParam String message) {
-        return chatClient.prompt().user(message).call().content();
+    public String chat(@RequestParam String conversationId, @RequestParam String message) {
+        return chatClient.prompt().user(message)
+                .advisors(a -> a.param(ChatMemory.CONVERSATION_ID, conversationId))
+                .call().content();
     }
 
 }
